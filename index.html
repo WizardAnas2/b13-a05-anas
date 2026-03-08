@@ -72,29 +72,30 @@
                 </div>
             </div>
         </nav>
-
+        
         <main class="max-w-7xl mx-auto px-4 py-8 w-full grow">
-            <div class="bg-gray-100 py-2 px-5 flex gap-5 items-center">
+           
+            
+            <div class="bg-white mb-8 border-b flex gap-3 overflow-x-auto sticky top-20 z-20">
+                <button onclick="filterData('all')" class="tab-btn active-tab py-3 px-5 text-xl flex items-center gap-2  m-2 rounded bg-blue-600 text-white font-bold">
+                     All <span id="count-all" class="text-gray-100 px-2 rounded-full font-bold text-xs">0</span>
+                </button>
+                <button onclick="filterData('open')" class="tab-btn py-3 px-5 text-xl flex items-center gap-2  hover:text-blue-600  m-2 rounded  bg-gray-100 text-black font-bold">
+                    <img src="./assets/Open-Status.png" alt=""> Open <span id="count-open" class="bg-gray-200 px-2 rounded-full text-xs">0</span>
+                </button>
+                <button onclick="filterData('closed')" class="tab-btn py-3 px-5 text-xl flex items-center gap-2  hover:text-blue-600  m-2 rounded bg-gray-100 text-black font-bold">
+                    <img src="./assets/Closed- Status .png" alt=""> Closed <span id="count-closed" class="bg-gray-200 px-2 rounded-full text-xs">0</span>
+                </button>
+            </div>
+             <div class="bg-gray-100 py-2 px-5 flex gap-5 items-center mb-3">
                 <div class="text-2xl">
                 <img class="w-9 h-9" src="./assets/Aperture.png" alt="">
                 </div>
                 <div>
-                <h2 class="text-2xl font-bold">50 issues</h2>
-                <p>Track and manage your project issues</p>
+                <h2 class="text-2xl  font-bold">50 issues</h2>
+                <p class="text-gray-500">Track and manage your project issues</p>
                 </div>
                 </div>
-            </div>
-            <div class="mb-8 border-b flex gap-3 overflow-x-auto">
-                <button onclick="filterData('all')" class="tab-btn active-tab py-3 px-5 text-xl flex items-center gap-2  m-2 rounded bg-blue-600 text-white font-bold">
-                     All <span id="count-all" class="text-gray-100 px-2 rounded-full font-bold text-xs">0</span>
-                </button>
-                <button onclick="filterData('open')" class="tab-btn py-2 px-1 text-xl flex items-center gap-2  hover:text-blue-600  m-2 rounded  bg-gray-100 text-black font-bold">
-                    <img src="./assets/Open-Status.png" alt=""> Open <span id="count-open" class="bg-gray-200 px-2 rounded-full text-xs">0</span>
-                </button>
-                <button onclick="filterData('closed')" class="tab-btn py-2 px-1 text-xl flex items-center gap-2  hover:text-blue-600  m-2 rounded bg-gray-100 text-black font-bold">
-                    <img src="./assets/Closed- Status .png" alt=""> Closed <span id="count-closed" class="bg-gray-200 px-2 rounded-full text-xs">0</span>
-                </button>
-            </div>
 
             <div id="loader" class="hidden flex flex-col items-center justify-center py-20">
                 <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
@@ -112,7 +113,7 @@
         <div id="modal-content">
             </div>
         <div class="p-4 bg-gray-50/50 border-t flex justify-end">
-            <button onclick="closeModal()" class="px-8 py-2 bg-[#5700FF] text-white font-semibold rounded-md hover:bg-opacity-90 transition shadow-sm">Close</button>
+            <button onclick="closeModal()" class="px-8 py-2 bg-red-500 text-white font-semibold rounded-md hover:bg-opacity-90 transition shadow-sm">Close</button>
         </div>
     </div>
 </div>

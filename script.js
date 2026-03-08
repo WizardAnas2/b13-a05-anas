@@ -224,7 +224,7 @@ const showDetails= async (id) => {
                     </div>
                     <div>
                         <p class="text-gray-400 text-xs mb-1 font-semibold">Priority:</p>
-                        <span class="bg-[#EF4444] text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <span class="bg-gray-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                             ${issue.priority ?? 'HIGH'}
                         </span>
                     </div>
