@@ -209,21 +209,21 @@ const showDetails= async (id) => {
                     <span>${issue.createdAt ? new Date(issue.createdAt).toLocaleDateString('en-GB') : 'Invalid Date'}</span>
                 </div>
                 <div class="flex gap-2 mb-8">
-                    <span class="px-2 py-1 rounded-full text-[10px] font-bold border bg-red-50 text-red-500 border-red-200 uppercase">
+                    <span class="px-2 py-1 rounded-full text-[15px] font-bold border bg-red-50 text-red-500 border-red-200 uppercase">
                         <i class="fa-solid fa-bug"></i> ${issue.label ?? 'BUG'}
                     </span>
-                    <span class="px-2 py-1 rounded-full text-[10px] font-bold border bg-orange-50 text-orange-500 border-orange-100 uppercase">
+                    <span class="px-2 py-1 rounded-full text-[15px] font-bold border bg-orange-50 text-orange-500 border-orange-100 uppercase">
                         <i class="fa-solid fa-triangle-exclamation"></i> HELP WANTED
                     </span>
                 </div>
-                <p class="text-[#4B5563] text-lg leading-relaxed mb-10">${issue.description ?? 'No description.'}</p>
+                <p class="text-[#4B5563] text-lg font--[16px] leading-relaxed mb-10">${issue.description ?? 'No description.'}</p>
                 <div class="bg-gray-50/80 rounded-lg p-6 grid grid-cols-2 border border-gray-100">
                     <div>
                         <p class="text-gray-400 text-sm mb-1 font-semibold">Assignee:</p>
-                        <p class="text-[#1F2937] font-bold text-lg">${issue.author ?? 'Unassigned'}</p>
+                        <p class="text-[#1F2937] font-bold text-lg"># ${issue.author ?? 'Unassigned'}</p>
                     </div>
                     <div>
-                        <p class="text-gray-400 text-sm mb-1 font-semibold">Priority:</p>
+                        <p class="text-gray-400 text-xs mb-1 font-semibold">Priority:</p>
                         <span class="bg-[#EF4444] text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                             ${issue.priority ?? 'HIGH'}
                         </span>
